@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>待办事项</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="app__header">
+        <h1 class="app__title">待办</h1>
+        <p class="app__subtitle">添加任务，勾选完成，随时整理</p>
+      </header>
+
+      <form class="todo-form" id="todo-form" autocomplete="off">
+        <label class="visually-hidden" for="todo-input">新任务</label>
+        <input
+          type="text"
+          id="todo-input"
+          class="todo-form__input"
+          placeholder="输入任务，按 Enter 或点击添加"
+          maxlength="500"
+          required
+        />
+        <button type="submit" class="todo-form__submit">添加</button>
+      </form>
+
+      <div class="filters" role="tablist" aria-label="筛选任务">
+        <button type="button" class="filters__btn filters__btn--active" data-filter="all" role="tab" aria-selected="true">
+          全部
+        </button>
+        <button type="button" class="filters__btn" data-filter="active" role="tab" aria-selected="false">未完成</button>
+        <button type="button" class="filters__btn" data-filter="completed" role="tab" aria-selected="false">已完成</button>
+      </div>
+
+      <ul class="todo-list" id="todo-list" aria-live="polite"></ul>
+
+      <footer class="app__footer">
+        <span class="app__count" id="todo-count"></span>
+        <button type="button" class="app__clear" id="clear-completed" hidden>清除已完成</button>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
