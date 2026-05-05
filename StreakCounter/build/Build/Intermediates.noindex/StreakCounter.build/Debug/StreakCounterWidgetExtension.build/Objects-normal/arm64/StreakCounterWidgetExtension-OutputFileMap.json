@@ -1,0 +1,39 @@
+{
+  "" : {
+    "diagnostics" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetExtension-primary.dia",
+    "emit-module-dependencies" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetExtension-primary-emit-module.d",
+    "emit-module-diagnostics" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetExtension-primary-emit-module.dia",
+    "pch" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetExtension-primary-Bridging-header.pch",
+    "swift-dependencies" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetExtension-primary.swiftdeps"
+  },
+  "/Users/jaredcheng/项目/git-init/StreakCounter/StreakCounter/StreakStore.swift" : {
+    "const-values" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakStore.swiftconstvalues",
+    "dependencies" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakStore.d",
+    "diagnostics" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakStore.dia",
+    "index-unit-output-path" : "/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakStore.o",
+    "llvm-bc" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakStore.bc",
+    "object" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakStore.o",
+    "swift-dependencies" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakStore.swiftdeps",
+    "swiftmodule" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakStore~partial.swiftmodule"
+  },
+  "/Users/jaredcheng/项目/git-init/StreakCounter/StreakCounterWidget/StreakCounterWidget.swift" : {
+    "const-values" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidget.swiftconstvalues",
+    "dependencies" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidget.d",
+    "diagnostics" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidget.dia",
+    "index-unit-output-path" : "/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidget.o",
+    "llvm-bc" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidget.bc",
+    "object" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidget.o",
+    "swift-dependencies" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidget.swiftdeps",
+    "swiftmodule" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidget~partial.swiftmodule"
+  },
+  "/Users/jaredcheng/项目/git-init/StreakCounter/StreakCounterWidget/StreakCounterWidgetBundle.swift" : {
+    "const-values" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetBundle.swiftconstvalues",
+    "dependencies" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetBundle.d",
+    "diagnostics" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetBundle.dia",
+    "index-unit-output-path" : "/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetBundle.o",
+    "llvm-bc" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetBundle.bc",
+    "object" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetBundle.o",
+    "swift-dependencies" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetBundle.swiftdeps",
+    "swiftmodule" : "/Users/jaredcheng/项目/git-init/StreakCounter/build/Build/Intermediates.noindex/StreakCounter.build/Debug/StreakCounterWidgetExtension.build/Objects-normal/arm64/StreakCounterWidgetBundle~partial.swiftmodule"
+  }
+}

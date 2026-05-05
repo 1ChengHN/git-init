@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>12</integer>
+	<key>logs</key>
+	<dict>
+		<key>29C1D76E-17C6-4FAF-9497-037B4E0F82B2</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>29C1D76E-17C6-4FAF-9497-037B4E0F82B2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>E</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>2</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>StreakCounter project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>StreakCounter</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Building project StreakCounter with scheme StreakCounter and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>799577517.56196797</real>
+			<key>timeStoppedRecording</key>
+			<real>799577518.41211605</real>
+			<key>title</key>
+			<string>Building project StreakCounter with scheme StreakCounter and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>29C1D76E-17C6-4FAF-9497-037B4E0F82B2</string>
+		</dict>
+		<key>6650D15A-D4E7-4FB1-B1D6-F488B2F4E31B</key>
+		<dict>
+			<key>className</key>
+			<string>IDECommandLineBuildLog</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
+			<key>fileName</key>
+			<string>6650D15A-D4E7-4FB1-B1D6-F488B2F4E31B.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+				<key>totalNumberOfAnalyzerIssues</key>
+				<integer>0</integer>
+				<key>totalNumberOfErrors</key>
+				<integer>0</integer>
+				<key>totalNumberOfTestFailures</key>
+				<integer>0</integer>
+				<key>totalNumberOfWarnings</key>
+				<integer>0</integer>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>StreakCounter project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>StreakCounter</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Cleaning project StreakCounter with scheme StreakCounter and configuration Debug</string>
+			<key>timeStartedRecording</key>
+			<real>799577755.01290596</real>
+			<key>timeStoppedRecording</key>
+			<real>799577755.164464</real>
+			<key>title</key>
+			<string>Cleaning project StreakCounter with scheme StreakCounter and configuration Debug</string>
+			<key>uniqueIdentifier</key>
+			<string>6650D15A-D4E7-4FB1-B1D6-F488B2F4E31B</string>
+		</dict>
+	</dict>
+</dict>
+</plist>
