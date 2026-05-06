@@ -17,6 +17,16 @@
 		A10000000000000000000008 /* StreakCounterWidgetBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A20000000000000000000009 /* StreakCounterWidgetBundle.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		AA0000000000000000000002 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AB0000000000000000000001 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A60000000000000000000002;
+			remoteInfo = StreakCounterWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		A30000000000000000000001 /* Embed Foundation Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -222,16 +232,6 @@
 		};
 /* End PBXTargetDependency section */
 
-/* Begin PBXContainerItemProxy section */
-		AA0000000000000000000002 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = AB0000000000000000000001 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A60000000000000000000002;
-			remoteInfo = StreakCounterWidgetExtension;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin XCBuildConfiguration section */
 		B10000000000000000000001 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -278,7 +278,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8WAW4W32UM;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -305,7 +305,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 8WAW4W32UM;
 				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -330,8 +330,8 @@
 				CODE_SIGN_ENTITLEMENTS = StreakCounterWidget/StreakCounterWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_APP_SANDBOX = NO;
+				DEVELOPMENT_TEAM = 8WAW4W32UM;
+				ENABLE_APP_SANDBOX = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StreakCounterWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "戒色天数";
@@ -356,8 +356,8 @@
 				CODE_SIGN_ENTITLEMENTS = StreakCounterWidget/StreakCounterWidget.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
-				ENABLE_APP_SANDBOX = NO;
+				DEVELOPMENT_TEAM = 8WAW4W32UM;
+				ENABLE_APP_SANDBOX = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = StreakCounterWidget/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "戒色天数";

@@ -6,6 +6,6 @@ struct StreakCounterApp: App {
         WindowGroup {
             ContentView()
         }
-        .defaultSize(width: 400, height: 320)
+        .defaultSize(width: 400, height: 500)
     }
 }

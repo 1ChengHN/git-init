@@ -1,56 +1,72 @@
 import Foundation
 
-/// 主应用与小组件通过同一文件共享「开始日」（非沙盒下使用 Application Support）
 private struct StreakPayload: Codable {
     var streakStartTimeIntervalSince1970: TimeInterval
+    var label: String = "戒色"
 }
 
 enum StreakStore {
-    private static let streakFileName = "streak.json"
+    private static let fileName = "streak.json"
 
-    private static var persistenceURL: URL? {
-        guard let applicationSupportRoot = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask).first else {
+    private static var realHomeURL: URL {
+        if let pw = getpwuid(getuid()), let cstr = pw.pointee.pw_dir {
+            return URL(fileURLWithPath: String(cString: cstr))
+        }
+        return FileManager.default.homeDirectoryForCurrentUser
+    }
+
+    // App Group sharing is unreliable for ad-hoc-signed extensions on macOS:
+    // sandboxd denies I/O on the group container even with the entitlement.
+    // The non-sandboxed app target writes into the widget's own sandbox
+    // container, which the widget reads with no sandbox check.
+    private static var dataURL: URL {
+        let dir = realHomeURL
+            .appendingPathComponent("Library")
+            .appendingPathComponent("Containers")
+            .appendingPathComponent("com.local.StreakCounter.widget")
+            .appendingPathComponent("Data")
+            .appendingPathComponent("Library")
+            .appendingPathComponent("Application Support")
+        try? FileManager.default.createDirectory(at: dir, withIntermediateDirectories: true)
+        return dir.appendingPathComponent(fileName)
+    }
+
+    private static func load() -> StreakPayload? {
+        guard let data = try? Data(contentsOf: dataURL),
+              let payload = try? JSONDecoder().decode(StreakPayload.self, from: data) else {
             return nil
         }
-        let streakFolder = applicationSupportRoot.appendingPathComponent("StreakCounter", isDirectory: true)
-        do {
-            try FileManager.default.createDirectory(at: streakFolder, withIntermediateDirectories: true)
-        } catch {
-            return nil
-        }
-        return streakFolder.appendingPathComponent(streakFileName)
+        return payload
     }
 
-    private static func loadPayload() -> StreakPayload? {
-        guard let url = persistenceURL else { return nil }
-        guard let data = try? Data(contentsOf: url) else { return nil }
-        return try? JSONDecoder().decode(StreakPayload.self, from: data)
+    private static func save(_ payload: StreakPayload) {
+        guard let data = try? JSONEncoder().encode(payload) else { return }
+        try? data.write(to: dataURL, options: .atomic)
     }
 
-    private static func savePayload(_ payload: StreakPayload) {
-        guard let url = persistenceURL else { return }
-        do {
-            let data = try JSONEncoder().encode(payload)
-            try data.write(to: url, options: .atomic)
-        } catch {
-            /* 磁盘满或权限问题时静默失败，界面仍显示内存中的逻辑日 */
-        }
-    }
-
-    /// 当前周期开始日（未持久化过则记为「今天」的开始）
     static var streakStartDate: Date {
         get {
-            if let payload = loadPayload() {
-                let stored = Date(timeIntervalSince1970: payload.streakStartTimeIntervalSince1970)
-                return calendarStartOfDay(from: stored)
+            if let payload = load() {
+                return Calendar.current.startOfDay(for: Date(timeIntervalSince1970: payload.streakStartTimeIntervalSince1970))
             }
-            let start = calendarStartOfDay(from: Date())
-            savePayload(StreakPayload(streakStartTimeIntervalSince1970: start.timeIntervalSince1970))
-            return start
+            let today = Calendar.current.startOfDay(for: Date())
+            save(StreakPayload(streakStartTimeIntervalSince1970: today.timeIntervalSince1970))
+            return today
         }
         set {
-            let normalized = calendarStartOfDay(from: newValue)
-            savePayload(StreakPayload(streakStartTimeIntervalSince1970: normalized.timeIntervalSince1970))
+            let normalized = Calendar.current.startOfDay(for: newValue)
+            var payload = load() ?? StreakPayload(streakStartTimeIntervalSince1970: normalized.timeIntervalSince1970)
+            payload.streakStartTimeIntervalSince1970 = normalized.timeIntervalSince1970
+            save(payload)
+        }
+    }
+
+    static var label: String {
+        get { load()?.label ?? "戒色" }
+        set {
+            var payload = load() ?? StreakPayload(streakStartTimeIntervalSince1970: Date().timeIntervalSince1970)
+            payload.label = newValue
+            save(payload)
         }
     }
 
@@ -59,13 +75,9 @@ enum StreakStore {
     }
 
     static var daysSinceStreakStart: Int {
-        let start = calendarStartOfDay(from: streakStartDate)
-        let today = calendarStartOfDay(from: Date())
-        let dayCount = Calendar.current.dateComponents([.day], from: start, to: today).day ?? 0
-        return max(0, dayCount)
-    }
-
-    private static func calendarStartOfDay(from date: Date) -> Date {
-        Calendar.current.startOfDay(for: date)
+        let start = Calendar.current.startOfDay(for: streakStartDate)
+        let today = Calendar.current.startOfDay(for: Date())
+        let days = Calendar.current.dateComponents([.day], from: start, to: today).day ?? 0
+        return max(0, days)
     }
 }
